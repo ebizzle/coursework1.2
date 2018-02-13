@@ -32,13 +32,13 @@ import static sun.rmi.transport.TransportConstants.Return;
       return this.accountBalance;
     }
 
-    public  void deposit(double value,String n) //Syncronized-Non-Synchronized
+    public synchronized void deposit(double value,String n) //Syncronized-Non-Synchronized
     {
         System.out.println("user "+n+" deposits " + value); 
      this.accountBalance += value; 
     }
 
-    public boolean withdraw(double value,String n)//Syncronized-Non-Synchronized
+    public synchronized boolean withdraw(double value,String n)//Syncronized-Non-Synchronized
     {
         System.out.println("user "+n+" withdraws " + value); 
         if (value > this.accountBalance){
