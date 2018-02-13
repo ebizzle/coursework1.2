@@ -35,7 +35,7 @@ public class Main {
         int option = 0;
         System.out.println("Welcome to Citione Bank");
 
-        while (true) {
+        while (option !=4) {
 
             System.out.println("1. Create Bank Account");
             System.out.println("2. Create User");
@@ -49,7 +49,7 @@ public class Main {
                 System.out.println("-----------------------------------");
                 System.out.println("A new Bank Account has been created");
                 System.out.println("Bank Account Number: 9876543210");
-                System.out.println("Opening Balance =£1980 ");
+                System.out.println("Starting Balance =£1980 ");
                 System.out.println("Bank Account Created Succesfully ");
                 System.out.println("----------------------------------");
 
@@ -64,6 +64,7 @@ public class Main {
 
             if (option == 3) {
                 System.out.println("Running Simulation............");
+                System.out.println("Starting Balance =£1980 ");
                 for (int e = 0; e < 4; e++) {
                     customer.get(e).start();
                 }
@@ -74,10 +75,11 @@ public class Main {
 
                 System.exit(0);
 
-            } else {
+            } 
+            //else {
 
                 System.out.println("Please pick from the Option given");
-            }
+           // }
         }
 
     }

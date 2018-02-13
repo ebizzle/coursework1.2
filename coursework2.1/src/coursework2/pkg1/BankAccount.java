@@ -20,7 +20,8 @@ public class BankAccount {
         return this.accountNo;
     }
 
-    public double getAccountBalance() {
+    public double getAccountBalance(double value, String n) {
+        
         return this.accountBalance;
     }
 
@@ -28,18 +29,18 @@ public class BankAccount {
     {
         System.out.println("user " + n + " deposits " + value);
         this.accountBalance += value;
+        System.out.println("The Current Account Balance is " + accountBalance);
+        
     }
 
-    public synchronized boolean withdraw(double value, String n)//Syncronized-Non-Synchronized
+    public synchronized void withdraw(double value, String n)//Syncronized-Non-Synchronized
     {
         System.out.println("user " + n + " withdraws " + value);
-        if (value > this.accountBalance) {
-            System.out.println("Insufficient Funds");
-            return false;
-        } else {
-            this.accountBalance -= value;
+       
+         this.accountBalance -= value;
+         System.out.println("The Current Account Balance is " + accountBalance);
         }
-        return false;
+        
     }
 
-}
+

@@ -25,7 +25,10 @@ public class User extends Thread {
 
             if (transactionList.get(e) > 0) {
                 bankAccount.deposit(transactionList.get(e), this.name);
+                
             }
+            
+          
         }
     }
 }
