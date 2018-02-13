@@ -63,11 +63,12 @@ public class Main {
             }
 
             if (option == 3) {
-                System.out.println("Running Simulation............");
-                System.out.println("Starting Balance =£1980 ");
                 for (int e = 0; e < 4; e++) {
                     customer.get(e).start();
                 }
+                System.out.println("Running Simulation............");
+                System.out.println("Starting Balance =£1980 ");
+                
 
             }
 
@@ -76,10 +77,7 @@ public class Main {
                 System.exit(0);
 
             } 
-            //else {
-
-                System.out.println("Please pick from the Option given");
-           // }
+            
         }
 
     }

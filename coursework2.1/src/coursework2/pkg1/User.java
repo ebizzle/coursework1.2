@@ -17,6 +17,7 @@ public class User extends Thread {
     }
 
     @Override
+    //Multithreading for a
     public void run() {
         for (int e = 0; e < transactionList.size(); e++) {
             if (transactionList.get(e) <= 0) {
